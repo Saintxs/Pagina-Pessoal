@@ -89,6 +89,7 @@
   <nav>
     <a href="#" onclick="mostrarSobre()">Sobre</a>
     <a href="#contato">Contato</a>
+    <a href="#" onclick="mostrarConhecimentos()">Conhecimentos</a>
   </nav>
 
   <main>
@@ -108,12 +109,25 @@
       </p>
     </section>
 
+   <section id="portfolio" style="display:none;">
+  <h2>Meus Conhecimentos</h2>
+
+  <p><strong>Introdução à Programação:</strong> Nível intermediário</p>
+  <p><strong>Programação Web 1:</strong> Nível intermediário</p>
+  <p><strong>JavaScript:</strong> Nível básico</p>
+</section>
+
     <section id="contato">
       <h2>Contato</h2>
       <p>Email: aps49@aluno.ifal.edu.br</p>
        <a href="https://github.com/seu-usuario" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40">
       </a>
+
+<a href="https://instagram.com/_saantoxs" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
+</a>
+
     </section>
 
   </main>
@@ -123,10 +137,28 @@
   </footer>
 
   <script>
-    function mostrarSobre() {
-      var secao = document.getElementById("sobre");
-      secao.style.display = "block";
-    }
+
+  function mostrarSobre() {
+  var secao = document.getElementById("sobre");
+
+  if (secao.style.display === "block") {
+    secao.style.display = "none";
+  } else {
+    secao.style.display = "block";
+  }
+}
+
+ function mostrarConhecimentos() {
+  var secao = document.getElementById("portfolio");
+
+  if (secao.style.display === "block") {
+    secao.style.display = "none";
+  } else {
+    secao.style.display = "block";
+  }
+}
+
+
   </script>
 
 </body>
