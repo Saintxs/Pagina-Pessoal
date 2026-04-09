@@ -87,13 +87,14 @@
     <p>Data de Nascimento: 01/03/2021</p>
     <p>Turma: 911C</p>
 
-    <img src="https://cdn.discordapp.com/attachments/1389794525081239575/1491885981270409266/IMG-20260111-WA00071.jpg?ex=69d95297&is=69d80117&hm=80f18ea3f233922f526886729c6dd6a2b8ce2dabcfff6bddcc6ae5552833236b&" alt="Minha foto" class="foto">
+    <img src="https://media.discordapp.net/attachments/1389794525081239575/1491931545567760516/IMG_20250101_012810_586.webp?ex=69d97d07&is=69d82b87&hm=44c362eeb301ce8408c5f28962347d8d13f36d298707eae240554da51dabcc50&=&format=webp&width=656&height=656" alt="Minha foto" class="foto">
   </header>
 
   <nav>
     <a href="#" onclick="mostrarSobre()">Sobre</a>
    <a href="#" onclick="mostrarContato()">Contato</a>
     <a href="#" onclick="mostrarConhecimentos()">Conhecimentos</a>
+    <a href="#" onclick="mostrarCurso()">Curso</a>
   </nav>
 
   <main>
@@ -105,7 +106,30 @@
         Tenho interesse em tecnologia e gosto de aprender coisas novas todos os dias.
         Busco sempre evoluir e melhorar minhas habilidades.
       </p>
+      <p>
+        Alguns dos livros que aprecio são: O Pequeno Príncipe, Memórias do Subsolo (Fiódor Dostoiévski) e A Metamorfose (Franz Kafka), entre outros.
+      </p>
     </section>
+
+<section id="curso" style="display:none;">
+  <h2></h2>
+
+  <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
+
+  <p>
+    O curso Técnico Integrado em Desenvolvimento de Sistemas forma estudantes para atuar na criação,
+    manutenção e análise de sistemas computacionais. O aluno aprende lógica de programação, banco de dados,
+    desenvolvimento web e fundamentos de engenharia de software.
+  </p>
+
+  <p>
+    Mais informações no site oficial do IFAL:
+  </p>
+
+  <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas" target="_blank" style="color:#a855f7;">
+    IFAL Campus Maceió - Página do Curso
+  </a>
+</section>
 
    <section id="portfolio" style="display:none;">
   <h2>Meus Conhecimentos</h2>
@@ -120,7 +144,7 @@
     <section id="contato">
       <h2>Contato</h2>
       <p>Email: aps49@aluno.ifal.edu.br</p>
-       <a href="https://github.com/seu-usuario" target="_blank">
+       <a href="https://github.com/Saintxs" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40">
       </a>
 
@@ -160,6 +184,16 @@
 
 function mostrarContato() {
   var secao = document.getElementById("contato");
+
+  if (secao.style.display === "block") {
+    secao.style.display = "none";
+  } else {
+    secao.style.display = "block";
+  }
+}
+
+function mostrarCurso() {
+  var secao = document.getElementById("curso");
 
   if (secao.style.display === "block") {
     secao.style.display = "none";
