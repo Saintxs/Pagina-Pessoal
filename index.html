@@ -32,6 +32,10 @@
       font-weight: bold;
     }
 
+#contato {
+  display: none;
+}
+
     main {
       max-width: 700px;
       margin: 30px auto;
@@ -88,18 +92,12 @@
 
   <nav>
     <a href="#" onclick="mostrarSobre()">Sobre</a>
-    <a href="#contato">Contato</a>
+   <a href="#" onclick="mostrarContato()">Contato</a>
     <a href="#" onclick="mostrarConhecimentos()">Conhecimentos</a>
   </nav>
 
   <main>
-
-    <section>
-      <h2>Interação</h2>
-      <button onclick="mostrarSobre()">MOSTRAR BIOGRAFIA</button>
-    
-    </section>
-
+<h2>Olá :)</h2>
     <section id="sobre">
       <h2>Sobre mim</h2>
       <p>
@@ -158,6 +156,15 @@
   }
 }
 
+function mostrarContato() {
+  var secao = document.getElementById("contato");
+
+  if (secao.style.display === "block") {
+    secao.style.display = "none";
+  } else {
+    secao.style.display = "block";
+  }
+}
 
   </script>
 
