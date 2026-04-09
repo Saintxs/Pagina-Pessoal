@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2e003e, #6a0dad);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #a855f7;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+    }
+
+    .foto {
+      width: 210px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: 2px solid #a855f7;
+    }
+
+    #sobre {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Arthur Pereira dos Santos</h1>
+    <p>Data de Nascimento: 01/03/2021</p>
+    <p>Turma: 911C</p>
+
+    <img src="https://cdn.discordapp.com/attachments/1389794525081239575/1491885981270409266/IMG-20260111-WA00071.jpg?ex=69d95297&is=69d80117&hm=80f18ea3f233922f526886729c6dd6a2b8ce2dabcfff6bddcc6ae5552833236b&" alt="Minha foto" class="foto">
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarSobre()">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>Interação</h2>
+      <button onclick="mostrarSobre()">MOSTRAR BIOGRAFIA</button>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>
+        Meu nome é Arthur Pereira dos Santos. Sou uma pessoa dedicada e estou começando na área de programação.
+        Tenho interesse em tecnologia e gosto de aprender coisas novas todos os dias.
+        Busco sempre evoluir e melhorar minhas habilidades.
+      </p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Email: aps49@aluno.ifal.edu.br</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - Página pessoal</p>
+  </footer>
+
+  <script>
+    function mostrarSobre() {
+      var secao = document.getElementById("sobre");
+      secao.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
