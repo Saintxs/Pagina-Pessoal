@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Pessoal</title>
+  <title>Página Pessoal - Arthur Pereira</title>
   <link rel="icon" type="image/png" href="https://www2.ifal.edu.br/o-ifal/comunicacao/arquivos/logos/NOVOLOGO_Ifal_Hor_PB.png">
 
   <style>
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #2e003e, #6a0dad);
       color: white;
     }
-
 
     header {
       text-align: center;
@@ -23,7 +21,6 @@
     }
 
     /*nav é a navegação, faz parte do HTML*/
-
     nav {
       text-align: center;
       background: rgba(0, 0, 0, 0.3);
@@ -31,20 +28,15 @@
     }
 
     /*nav a já faz parte do CSS*/
-
     nav a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
-#contato {
-  display: none;
-}
-
     /*main é o conteúdo principal da página*/
-
     main {
       max-width: 700px;
       margin: 30px auto;
@@ -54,11 +46,9 @@
       text-align: center;
     }
 
-
     section {
       margin-bottom: 20px;
     }
-
 
     button {
       padding: 10px;
@@ -70,7 +60,6 @@
     }
 
     /*Footer é o rodapé*/
-
     footer {
       text-align: center;
       padding: 10px;
@@ -79,7 +68,6 @@
     }
 
     /*Aqui é as atribuições na foto 3x4, como a borda roxa em volta.*/
-
     .foto {
       width: 210px;
       height: 210px;
@@ -89,11 +77,39 @@
       border: 2px solid #a855f7;
     }
 
-  
-    #sobre {
+    /* Ocultar seções por padrão conforme lógica original */
+    #sobre, #curso, #portfolio, #contato, #atividades-ifal {
       display: none;
     }
-    /*Áreas de nomes, fotos, auto biografia, data de nascimento, e um breve resumo do Curso Técnico Desenvolvimento de Sistemas*/
+
+    /* Estilização das listas de links das atividades */
+    .lista-atividades {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    .lista-atividades li {
+      margin-bottom: 8px;
+    }
+
+    .lista-atividades a {
+      color: #e9d5ff;
+      text-decoration: none;
+    }
+
+    .lista-atividades a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 20px 0;
+    }
   </style>
 </head>
 
@@ -103,19 +119,20 @@
     <h1>Arthur Pereira dos Santos</h1>
     <p>Data de Nascimento: 01/03/2011</p>
     <p>Turma: 911C</p>
-
     <img src="minha-foto.jpeg" alt="Foto aqui" class="foto">
   </header>
 
   <nav>
-    <a href="#" onclick="mostrarSobre()">Sobre</a>
-   <a href="#" onclick="mostrarContato()">Contato</a>
-    <a href="#" onclick="mostrarConhecimentos()">Conhecimentos</a>
-    <a href="#" onclick="mostrarCurso()">Curso</a>
+    <a onclick="mostrarSobre()">Sobre</a>
+    <a onclick="mostrarContato()">Contato</a>
+    <a onclick="mostrarConhecimentos()">Conhecimentos</a>
+    <a onclick="mostrarCurso()">Curso</a>
+    <a onclick="mostrarAtividades()" style="color: #a855f7;">Atividades IFAL</a>
   </nav>
 
   <main>
-<h2>Olá :)</h2>
+    <h2>Olá :)</h2>
+
     <section id="sobre">
       <h2>Sobre mim</h2>
       <p>
@@ -128,97 +145,102 @@
       </p>
     </section>
 
-<section id="curso" style="display:none;">
-  <h2></h2>
+    <section id="curso">
+      <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
+      <p>
+        O curso Técnico Integrado em Desenvolvimento de Sistemas forma estudantes para atuar na criação,
+        manutenção e análise de sistemas computacionais. O aluno aprende lógica de programação, banco de dados,
+        desenvolvimento web e fundamentos de engenharia de software.
+      </p>
+      <p>
+        Mais informações no site oficial do IFAL:
+      </p>
+      <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas" target="_blank" style="color:#a855f7; font-weight: bold;">
+        IFAL Campus Maceió - Página do Curso
+      </a>
+    </section>
 
-  <p><strong>Curso:</strong> Desenvolvimento de Sistemas</p>
-
-  <p>
-    O curso Técnico Integrado em Desenvolvimento de Sistemas forma estudantes para atuar na criação,
-    manutenção e análise de sistemas computacionais. O aluno aprende lógica de programação, banco de dados,
-    desenvolvimento web e fundamentos de engenharia de software.
-  </p>
-
-  <p>
-    Mais informações no site oficial do IFAL:
-  </p>
-
-  <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas" target="_blank" style="color:#a855f7;">
-    IFAL Campus Maceió - Página do Curso
-  </a>
-</section>
-
-   <section id="portfolio" style="display:none;">
-  <h2>Meus Conhecimentos</h2>
-
-  <p><strong>Introdução à Programação (JavaScript):</strong> Nivel básico</p>
-  <p><strong>Fundamentos da Informática:</strong> Nível básico</p>
-  <p><strong>Programação Web 1:</strong> Nível básico</p>
-
-
-</section>
+    <section id="portfolio">
+      <h2>Meus Conhecimentos</h2>
+      <p><strong>Introdução à Programação (JavaScript):</strong> Nível básico</p>
+      <p><strong>Fundamentos da Informática:</strong> Nível básico</p>
+      <p><strong>Programação Web 1:</strong> Nível básico</p>
+    </section>
 
     <section id="contato">
       <h2>Contato</h2>
       <p>Email: aps49@aluno.ifal.edu.br</p>
-       <a href="https://github.com/Saintxs" target="_blank">
+      <a href="https://github.com/Saintxs" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40">
       </a>
+      <a href="https://instagram.com/_saantoxs" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
+      </a>
+    </section>
 
-<a href="https://instagram.com/_saantoxs" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
-</a>
+    <section id="atividades-ifal">
+      <h2>Portfólio de Atividades Práticas</h2>
+      
+      <h3>Capítulo 4 - Tabelas, Listas e Mídia</h3>
+      <ul class="lista-atividades">
+        <li><a href="cap04/at01.html">Atividade 1 - Tabela Básica</a></li>
+        <li><a href="cap04/at02.html">Atividade 2 - Tabela Semântica com Mesclagem</a></li>
+        <li><a href="cap04/at03.html">Atividade 3 - Listas Avançadas e Glossário</a></li>
+        <li><a href="cap04/at04.html">Atividade 4 - Página Multimídia</a></li>
+      </ul>
 
+      <hr>
+
+      <h3>Capítulo 5 - Formulários HTML</h3>
+      <ul class="lista-atividades">
+        <li><a href="cap05/at01.html">Atividade 1 - Formulário de Contato</a></li>
+        <li><a href="cap05/at02.html">Atividade 2 - Cadastro de Usuário</a></li>
+        <li><a href="cap05/at03.html">Atividade 3 - Matrícula Acadêmica</a></li>
+        <li><a href="cap05/at04.html">Atividade 4 - Inscrição em Evento</a></li>
+        <li><a href="cap05/at05.html">Atividade 5 - Pesquisa Acadêmica</a></li>
+      </ul>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2026 - Página pessoal</p>
+    <p>© 2026 - Página pessoal | Arthur Pereira dos Santos - IFAL</p>
   </footer>
 
   <script>
+    function mostrarSobre() {
+       toggleSecao("sobre");
+    }
 
-  function mostrarSobre() {
-  var secao = document.getElementById("sobre");
+    function mostrarConhecimentos() {
+      toggleSecao("portfolio");
+    }
 
-  if (secao.style.display === "block") {
-    secao.style.display = "none";
-  } else {
-    secao.style.display = "block";
-  }
-}
+    function mostrarContato() {
+      toggleSecao("contato");
+    }
 
- function mostrarConhecimentos() {
-  var secao = document.getElementById("portfolio");
+    function mostrarCurso() {
+      toggleSecao("curso");
+    }
 
-  if (secao.style.display === "block") {
-    secao.style.display = "none";
-  } else {
-    secao.style.display = "block";
-  }
-}
+    // Nova função JS para alternar a exibição da lista de atividades do IFAL
+    function mostrarAtividades() {
+      toggleSecao("atividades-ifal");
+    }
 
-function mostrarContato() {
-  var secao = document.getElementById("contato");
-
-  if (secao.style.display === "block") {
-    secao.style.display = "none";
-  } else {
-    secao.style.display = "block";
-  }
-}
-
-function mostrarCurso() {
-  var secao = document.getElementById("curso");
-
-  if (secao.style.display === "block") {
-    secao.style.display = "none";
-  } else {
-    secao.style.display = "block";
-  }
-}
-
+    // Função auxiliar para automatizar e não deixar duas abas abertas ao mesmo tempo
+    function toggleSecao(idFoco) {
+      const secoes = ["sobre", "portfolio", "contato", "curso", "atividades-ifal"];
+      secoes.forEach(id => {
+        var el = document.getElementById(id);
+        if (id === idFoco) {
+          el.style.display = (el.style.display === "block") ? "none" : "block";
+        } else {
+          el.style.display = "none";
+        }
+      });
+    }
   </script>
 
 </body>
