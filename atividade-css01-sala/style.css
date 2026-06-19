@@ -114,3 +114,7 @@ footer {
     margin-bottom: 0;
     font-weight: normal;
 }
+
+.foto-ifal {
+    max-width: 90px;
+}
